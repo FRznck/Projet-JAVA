@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane xmlns="http://javafx.com/javafx/20" 
+            xmlns:fx="http://javafx.com/fxml/1" 
+            fx:controller="com.example.controllers.AppController" 
+            styleClass="root">
+
+    <!-- Titre de l'application en haut -->
+    <top>
+        <Label text="Gestion des Utilisateurs" styleClass="header"/>
+    </top>
+
+    <!-- Section gauche : Ajouter un utilisateur -->
+    <left>
+        <VBox styleClass="section" spacing="10" alignment="CENTER">
+            <Label text="Ajouter un Utilisateur" styleClass="sub-header"/>
+            <GridPane styleClass="grid-pane">
+                <Label text="Nom:" styleClass="label" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+                <TextField fx:id="nomField" styleClass="text-field" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+
+                <Label text="Email:" styleClass="label" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+                <TextField fx:id="emailField" styleClass="text-field" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+
+                <Button text="Ajouter" onAction="#addUtilisateurs" styleClass="button" GridPane.rowIndex="2" GridPane.columnSpan="2"/>
+            </GridPane>
+        </VBox>
+    </left>
+
+    <!-- Section centrale : Modifier et Supprimer un utilisateur -->
+    <center>
+        <VBox styleClass="section" spacing="10" alignment="CENTER">
+            <Label text="Modifier/Supprimer un Utilisateur" styleClass="sub-header"/>
+            <Label text="Pour supprimer un utilisateur, merci de saisir rien que l'ID." styleClass="red-text"/>
+            
+            <GridPane styleClass="grid-pane">
+                <Label text="ID:" styleClass="label" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+                <TextField fx:id="idField" styleClass="text-field" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+
+                <Label text="Nouveau Nom:" styleClass="label" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+                <TextField fx:id="nouveauNomField" styleClass="text-field" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+
+                <Label text="Nouvel Email:" styleClass="label" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+                <TextField fx:id="nouveauemailField" styleClass="text-field" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+
+                <Button text="Modifier" onAction="#modifierUtilisateur" styleClass="button" GridPane.rowIndex="3" GridPane.columnIndex="0"/>
+                <Button text="Supprimer" onAction="#deleteUtilisateurs" styleClass="button" GridPane.rowIndex="3" GridPane.columnIndex="1"/>
+            </GridPane>
+        </VBox>
+    </center>
+
+    <!-- Section droite : Rechercher des utilisateurs -->
+    <right>
+        <VBox styleClass="section" spacing="10" alignment="CENTER">
+            <Label text="Rechercher des Utilisateurs" styleClass="sub-header"/>
+            <GridPane styleClass="grid-pane">
+                <Label text="Terme de recherche:" styleClass="label" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+                <TextField fx:id="searchField" styleClass="text-field" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+
+                <Button text="Rechercher par Nom/Email" onAction="#rechercherParEmailOuNom" styleClass="button" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+            </GridPane>
+        </VBox>
+    </right>
+
+    <!-- Zone de résultats en bas -->
+    <bottom>
+        <VBox styleClass="section" spacing="10" alignment="CENTER">
+            <Label text="Résultats" styleClass="sub-header"/>
+            <TextArea fx:id="resultArea" styleClass="text-area"/>
+            <Button text="Lister Tous les Utilisateurs" onAction="#listUtilisateurs" styleClass="button"/>
+            <Button text="Exporter la liste" onAction="#exporterListeUtilisateurs" styleClass="button"/>
+        </VBox>
+    </bottom>
+</BorderPane>

@@ -1,0 +1,90 @@
+/* Style général de l'application */
+.root {
+    -fx-background-color: #f4f4f4; /* Fond clair */
+    -fx-padding: 20;
+    -fx-spacing: 20;
+}
+
+/* Style pour les en-têtes */
+.header {
+    -fx-font-size: 28px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #2c3e50; /* Couleur de texte foncée */
+    -fx-padding: 0 0 20 0;
+}
+
+.sub-header {
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #34495e; /* Couleur de texte légèrement plus claire */
+    -fx-padding: 0 0 10 0;
+}
+
+
+/* Style pour les sections */
+.section {
+    -fx-background-color: white;
+    -fx-border-color: #bdc3c7; /* Bordure grise */
+    -fx-border-radius: 10px;
+    -fx-background-radius: 10px;
+    -fx-padding: 20px;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 5, 0, 0, 2); /* Ombre légère */
+}
+
+/* Style pour les grilles (GridPane) */
+.grid-pane {
+    -fx-hgap: 15px; /* Espacement horizontal entre les éléments */
+    -fx-vgap: 10px; /* Espacement vertical entre les éléments */
+}
+
+/* Style pour les labels */
+.label {
+    -fx-font-size: 14px;
+    -fx-text-fill: #34495e; /* Couleur de texte légèrement plus claire */
+}
+
+/* Style pour les champs de texte */
+.text-field {
+    -fx-pref-width: 200px;
+    -fx-padding: 8px;
+    -fx-background-color: white;
+    -fx-border-color: #bdc3c7; /* Bordure grise */
+    -fx-border-radius: 5px;
+    -fx-background-radius: 5px;
+}
+
+.text-field:focused {
+    -fx-border-color: #3498db; /* Bordure bleue lorsqu'en focus */
+}
+
+/* Style pour les boutons */
+.button {
+    -fx-background-color: #3498db; /* Bleu clair */
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-padding: 10px 20px;
+    -fx-border-radius: 5px;
+    -fx-background-radius: 5px;
+    -fx-cursor: hand;
+}
+
+.button:hover {
+    -fx-background-color: #2980b9; /* Bleu plus foncé au survol */
+}
+
+.button:pressed {
+    -fx-background-color: #1c5980; /* Bleu encore plus foncé au clic */
+}
+
+/* Style pour la zone de résultats (TextArea) */
+.text-area {
+    -fx-pref-width: 600px;
+    -fx-pref-height: 200px;
+    -fx-background-color: white;
+    -fx-border-color: #bdc3c7; /* Bordure grise */
+    -fx-border-radius: 5px;
+    -fx-background-radius: 5px;
+    -fx-padding: 10px;
+    -fx-font-size: 14px;
+    -fx-text-fill: #2c3e50; /* Couleur de texte foncée */
+}
