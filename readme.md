@@ -77,40 +77,8 @@ src/
 │           └── App.fxml (gestion des boutons,label)
 
 
-```--------------------------------------------------------------------------------------------------------------------------```
-Prérequis"
-Pour exécuter cette application, vous avez besoin des éléments suivants :
-
-Java Development Kit (JDK) : Version 11 ou supérieure.
-
-JavaFX : Bibliothèque pour l'interface graphique.
-
-MySQL : Base de données pour stocker les utilisateurs.
-
-MySQL Connector/J : Pilote JDBC pour se connecter à MySQL.
-
-```--------------------------------------------------------------------------------------------------------------------------```
-Améliorations possibles
-Validation des entrées :
-
-Ajouter des vérifications supplémentaires pour les champs de saisie.
-
-Gestion des erreurs :
-
-Améliorer la gestion des erreurs SQL et des exceptions.
-
-Interface utilisateur :
-
-Ajouter des animations ou des notifications pour améliorer l'expérience utilisateur.
-
-Fonctionnalités supplémentaires :
-
-Ajouter des options de tri et de filtrage pour la liste des utilisateurs.
-
-```--------------------------------------------------------------------------------------------------------------------------```
-
 Auteurs
 
-Franck-Arsène KOUASSI
+FRznck
 ```--------------------------------------------------------------------------------------------------------------------------```
 
